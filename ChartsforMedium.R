@@ -30,6 +30,15 @@ ggplot(calls, aes(x=Day, y=InboundCalls)) +
         axis.line = element_line(color = "grey80"),
         axis.ticks = element_line(color = "grey80"),
         axis.text = element_text(color = "grey55"))
+
+callz <- calls %>%
+  mutate(BigBar=ifelse(Day==22, "1", "0"))
+
+callz %>%
+  ggplot(aes(x=Day, y=InboundCalls, fill=BigBar)) +
+  geom_col(width=0.5)+
+  scale_fill_manual( values = c( "1"="red", "0"="darkgray" ), guide = FALSE )+
+  labs(title="Highlighting a Bar in Barplot in ggplt2")
   
 
 ----
