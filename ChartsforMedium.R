@@ -28,7 +28,7 @@ callz %>%
              fill="grey",
              inherit.aes = TRUE) +
   labs(y = "Received \n Calls",
-       title = "Call Volume By Workday", x = "Workday") +
+       title = "Call Volume by Workday", x = "Workday") +
   theme(axis.title.y = element_text(angle = 0, vjust = 0, color = "grey55"),
         axis.title.x = element_text(hjust = 0.05, color = "grey55"),
         plot.title = element_text(hjust = 0.5, color = "grey55", size = 30),
